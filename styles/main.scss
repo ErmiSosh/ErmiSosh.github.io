@@ -1,0 +1,1063 @@
+@import '../styles/base/mixins';
+@import '../styles/base/reset';
+@import '../styles/base/variables';
+@import './base/fonts';
+
+body{
+    width: 1440px;
+    height: 3451px;
+    font-size: 10px; 
+}
+
+.header{
+    width: 1440px;
+    height: 700px;
+    background-image: url(../Images/Background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 91px;
+   
+
+    &__nav{
+        width: 100%;
+        height: 80px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        align-items: flex-start;
+
+        &__title{
+            width: 152px;
+            height: 24px;
+            text-transform:uppercase;
+            font-family: $font-bold;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            color: rgba(255, 255, 255, 1);
+            margin: 49px 0 0 -42px;
+            letter-spacing: 1px;
+
+        }
+
+        &__button{
+            width: 180px;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+            margin: 41px 0 0 -12px;
+
+            &__button1{
+               @include buttonh;
+               border: none;
+            }
+             &__button2{
+               @include buttonh;
+               border: 2px solid #FFFFFF;
+               border-radius: 40px;
+            }
+
+        }
+    }
+
+    &__content{
+        width: 470px;
+        height: 253px;
+        margin: 150px auto;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: center;
+
+          &__name{
+            width: 470px;
+            height: 126px;    
+            font-size: 52px;
+            line-height: 63px;
+            text-align: center;
+            color: #FFFFFF;  
+            font-family: $font-bold;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            margin: -4px 0 0 -2px;
+        }
+
+        &__name2{
+            width: 410px;
+            height: 25px;    
+            font-size: 23px;
+            line-height: 24px;
+            text-align: center;
+            color: rgba(247, 243, 242, 1);
+            font-family: $font-text;
+            font-weight: 300; 
+            letter-spacing: 0.2px; 
+            margin: 27px 0 0 -1px;
+        }
+
+        &__button{
+            width: 225px;
+            height: 40px;
+            background: #FF4E50;
+            border-radius: 40px;
+            border:none;
+            margin-top: 33px;
+            letter-spacing: 1.5px;
+            color: #FFFFFF;
+
+        }
+    }
+
+  
+
+}
+
+.section1{
+    width: 940px;
+    height: 461px;
+    margin: 0 auto 95px;
+
+    &__title{
+        @include title;
+    }
+
+    &__image{
+        width: 940px;
+        height: 400px; 
+        display: flex; 
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+
+        &__item1{
+           @include sOne (url(../Images/Step1.png)); 
+           
+           &__step{
+               @include steps (0px, 4px);
+               
+           }
+           &__title{
+               @include titles (21px, 58px);
+           }
+           &__text{
+               @include text1 (14px);
+           }
+        }
+
+        &__item2{
+            @include sOne (url(../Images/Step2.png)); 
+            &__step{
+               @include steps (0px, 2px);
+               
+           }
+           &__title{
+               @include titles (23px, 29px);
+           }
+           &__text{
+               @include text1 (14px);
+           }
+        }
+
+        &__item3 {
+            @include sOne (url(../Images/Step3.png));
+            &__step{
+               @include steps (0px, 4px);
+           }
+           &__title{
+               @include titles (21px, 58px);
+           }
+           &__text{
+               @include text1 (14px);
+           }
+        }
+    }
+}
+
+.section2{
+    width: 941px;
+    height: 361px;
+    margin: 0 auto 115px;
+
+    &__title{
+        @include title;
+    }
+    &__box{
+        @include box;
+        &__pic1{
+            @include pics;
+            &__img{
+                @include img2s (url(../Images/Bitmap.png));
+                &::after{
+                    @include after (url(../Images/music2.png), #FF4E50, 6px);
+                }
+                }
+            &__figcaption{
+                @include figcaption2s (22px);
+            }
+            &__description{
+                @include desc2s;
+            }
+        }
+        &__pic2{
+            @include pics;
+             &__img{
+                @include img2s (url(../Images/Bitmap2.png));
+                &::after{
+                    @include after (url(../Images/brush.png), #19D4CA, 6px);
+                }
+            }
+             &__figcaption{
+                @include figcaption2s (22px);
+            }
+            &__description{
+                @include desc2s;
+            }
+        }
+        &__pic3{
+            @include pics;
+             &__img{
+                @include img2s (url(../Images/Bitmap3.png));
+                &::after{
+                    @include after (url(../Images/camera.png), #FFA710, 6px);
+                }
+            }
+             &__figcaption{
+                @include figcaption2s (26px);
+            }
+            &__description{
+                @include desc2s;
+            }
+        }
+        &__pic4{
+            @include pics;
+             &__img{
+                @include img2s (url(../Images/Bitmap4.png));
+                &::after{
+                    @include after (url(../Images/Shape.png), #667DF3, 2px);
+                    padding-left: 2px;
+                }
+            }
+             &__figcaption{
+                @include figcaption2s (26px);
+            }
+            &__description{
+                @include desc2s;
+            }
+        }
+    }
+    &__button{
+        width: 180px;
+        height: 40px;
+        border-radius: 40px;
+        border: 2px solid #FF4E50;
+        color:#FF4E50;
+        font-size: 14px;
+        line-height: 17px;
+        font-family: $font-bold;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-align: center;
+        padding: 10px;
+        margin:0 auto;
+
+    }
+
+}
+
+.section3{
+    width: 940px;
+    height: 1020px;
+    margin: 0 auto 90px;
+
+    &__title{
+        @include title;
+    }
+
+    &__container{
+        width: 941px;
+        height: 951px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        align-items: center;
+
+
+        &__box1{
+            @include boxs3 (310px);
+
+            &__item1{
+                @include items (300px, 310px, url(../Images/Grid1.png))
+            }
+            &__item2{
+                @include items (300px, 310px, url(../Images/Grid2.png))
+            }
+            &__item3{
+                @include items (300px, 310px, url(../Images/Grid3.png))
+            }
+        }
+
+        &__box2 {
+            @include boxs3 (310px);
+           
+            &__item4{
+                @include items (300px, 310px, url(../Images/Grid4.png))
+            }
+            &__item5{
+                @include items (620px, 310px, url(../Images/Grid5.png))
+            }
+        }
+
+        &__box3{
+           @include boxs3 (291px); 
+
+            &__item6{
+                @include items (620px, 291px, url(../Images/Grid6.png))
+            }
+            &__item7{
+                @include items (300px, 291px, url(../Images/Grid7.png))
+            }
+        }
+    }
+
+}
+
+.section4{
+    width: 481px;
+    height: 163px;
+    margin: 0 auto 98px;
+
+    &__title{
+        @include title;
+    }
+
+    &__form{
+       width: 100%;
+       height: 96px; 
+
+       &__text{
+            width: 100%;
+            height: 24px;
+            font-size: 17.5px;
+            line-height: 18px;
+            font-family: $font-text;
+            font-weight: 300;
+            color: rgba(102, 102, 102, 1);
+            text-align: center;
+            margin-top: 49px;
+        }
+
+        &__input{
+            width: 100%;
+            height: 40px;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            margin-top: 17px;
+
+            &__field{
+                width: 299px;
+                height: 40px;
+                padding: 10px;
+                border: 1px solid #D4D4D4;
+                box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.073313);
+                border-radius: 3px;
+                font-weight: 300;
+                font-size: 14px;
+                line-height: 16px;
+                font-family: $font-text;
+                letter-spacing: 0.5px;
+            }
+
+            &__button{
+                width: 172px;
+                height: 40px;
+                background: #FF4E50;
+                border:none;
+                border-radius: 40px;
+                font-size: 14px;
+                line-height: 17px;
+                letter-spacing: 00.5px;
+                color:#FFFFFF;
+                font-family: $font-bold;
+            }
+        }
+    }
+  
+}
+
+.footer{
+    width: 100%;
+    height: 222px;
+    border-top: 3px solid #FF4E50;
+
+    &__content{
+        width: 944px;
+        height: 224px;
+        margin: 0 auto;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-top: 31px;
+        
+
+      &__dreamshare{
+          @include fof (rgba(255, 78, 80, 1), 400);
+          text-transform: uppercase;
+          font-size: 17px;
+          margin-right: 122px;
+      }  
+      &__company{
+          width: 160px;
+          letter-spacing: 1px;
+          @include fof (#444444, 700);
+          margin-right: 80px;
+          &__list{
+            margin-top: 10px;
+        @include fof (rgba(153, 153, 153, 1), 300);  
+          }
+      }
+      &__partners{
+          width: 120px;
+          @include fof (#444444, 700);
+          letter-spacing: 1px;
+          margin-right: 230px;
+          
+      }
+      &__logo{
+        font-size: 12px;
+        line-height: 26px;
+        font-family:$font-bold;
+        font-weight: 700;
+        text-align: end;
+        color:  #CCCCCC;
+        text-transform: uppercase; 
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+      }
+    }
+}
+
+@media screen and (max-width:768px) {
+
+    body{
+    width: 768px;
+    height: 3679px;
+    }
+
+    .header{
+        width: 768px;
+        height: 700px;
+        background-position:center;  
+        &__nav{
+            justify-content: space-between;
+            &__title{
+                margin: 48px 0 0 47px;
+            }
+            &__button{
+               margin: 41px 49px 0 0;
+            }
+        }
+    }
+
+    .section1{
+        width: 748px;
+        height: 461px;
+        margin: 0 auto 95px;
+
+        &__title{
+            font-size: 22px;
+        }
+
+        &__image{
+            width: 748px;
+
+            &__item1{
+            @include sOnetab;
+                &__step{
+                    @include steps (0px, 7px);    
+                }
+                &__title{
+                    @include titles (31px, 58px);
+                    width: 196px;
+                }
+                &__text{
+                    @include text1tab;
+                }
+            }
+
+            &__item2{
+                @include sOnetab;
+                &__step{
+                    @include steps (0px, -13px);
+                }
+                &__title{
+                    @include titles (23px, 29px);
+                    width: 196px;
+                }
+                &__text{
+                    @include text1tab;
+                    padding-top: 28px;
+                }
+            }
+
+            &__item3 {
+                @include sOnetab;
+                &__step{
+                    @include steps (0px, 7px);
+                }
+                &__title{
+                    @include titles (34px, 58px);
+                    width: 196px;
+                }
+                &__text{
+                    @include text1tab;
+                }
+            }
+        }
+    }
+
+    .section2{
+        width: 492px;
+        height: 605px;
+        margin: 0 auto 95px;
+
+        &__title{
+            font-size: 22px;
+        }
+        &__box{
+            width:492px;
+            height: 464px;
+            flex-flow: row wrap;
+            &__pic1{
+                &__img{
+                    margin: -3px 58px 19px;
+                    &::after{
+                       right:-2px;
+                       bottom:-2px;
+                    }
+                }
+            }
+            &__pic2{
+                &__img{
+                    margin: -3px 43px 19px;
+                    &::after{
+                       right:-2px;
+                       bottom:-2px;
+                    }
+                }
+            }
+            &__pic3{
+                &__img{
+                    margin: -3px 58px 19px;
+                    &::after{
+                       right:-2px;
+                       bottom:-2px;
+                    }
+                }
+            }
+            &__pic4{
+                &__img{
+                   margin: -3px 43px 19px;
+                    &::after{
+                       right:-2px;
+                       bottom:-2px;
+                    }
+                }
+            }
+        }
+    }
+
+    .section3{
+        width: 748px;
+        height: 1031px;
+        margin: 0 auto 95px;
+
+        &__title{
+            font-size: 22px;
+        }
+
+        &__container{
+            width: 748px;
+            height: 970px;
+
+            &__box1{
+                @include boxs3 (310px);
+
+                &__item1{
+                    @include items (236px, 310px, url(../Images/Grid1.png));
+                    background-position: center;
+                }
+                &__item2{
+                    @include items (236px, 310px, url(../Images/Grid2.png));
+                    background-position: center;
+                }
+                &__item3{
+                    @include items (236px, 310px, url(../Images/Grid3.png));
+                    background-position: center;
+                }
+            }
+
+            &__box2 {
+                @include boxs3 (310px);
+            
+                &__item4{
+                    @include items (236px, 310px, url(../Images/Grid4.png));
+                    background-position: center;
+                }
+                &__item5{
+                    @include items (492px, 310px, url(../Images/Grid5.png));
+                    background-position: center;
+                }
+            }
+
+            &__box3{
+            @include boxs3 (310px);
+                &__item6{
+                    @include items (492px, 310px, url(../Images/Grid6.png));    
+                }
+                &__item7{
+                    @include items (236px, 310px, url(../Images/Grid7.png));
+                }
+            }
+        }
+
+    }
+
+    .section4{
+        width: 481px;
+        height: 158px;
+        margin: 0 auto 105px;
+
+        &__title{
+            font-size: 22px;
+        }
+    }
+
+    .footer{
+        width: 768px;
+        height: 244px;
+
+        &__content{
+            width: 768px;
+            height: 244px;
+            margin-top: 31px;   
+
+            &__dreamshare{
+                margin-right: 106px;
+                margin-left: 40px;
+            }  
+            &__company{
+                margin-right: 10px;
+                &__list{
+                    width: 160px;
+                    margin-top: 8px;
+                    line-height: 26px; 
+                }
+            }
+            &__partners{
+                margin-right: 62px;   
+            }
+        }
+    }
+  
+}
+
+@media screen and (max-width:320px) {
+
+body{
+    width: 320px;
+    height: 3938px;
+}
+
+.header{
+    width: 320px;
+    height: 540px;
+    margin-bottom: 35px;
+   
+    &__nav{
+        margin-left: 62px;
+        width: 250px;
+        &__title{
+            display:none;
+        }
+    }
+
+    &__content{
+        width: 281px;
+        height: 234px;
+        margin: 153px auto;
+        position: relative;
+
+        &::before{
+            content: "DREAMSHARE";
+            position: absolute;
+            top: -47px;
+            font-size: 20px;
+            line-height: 24px; 
+            text-transform:uppercase;
+            font-family: $font-bold;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 1);
+            letter-spacing: 1px; 
+        }
+
+          &__name{
+            width: 272px;
+            height: 74px;    
+            font-size: 29px;
+            line-height: 37px;
+            letter-spacing: 2px;
+        }
+
+        &__name2{
+            width: 280px;
+            height: 49px;    
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+
+  
+
+}
+
+.section1{
+    width: 300px;
+    height: 781px;
+    margin: 0 auto 36px;
+
+    &__title{
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    &__image{
+        width: 300px;
+        height: 740px; 
+        flex-flow: column nowrap;
+
+        &__item1{
+           @include sOnemob; 
+           
+           &__step{
+               @include steps (0px, 4px);
+               
+           }
+           &__title{
+               @include titles (21px, 58px);
+           }
+           &__text{
+               @include text1 (14px);
+           }
+        }
+
+        &__item2{
+            @include sOnemob; 
+            &__step{
+               @include steps (0px, 2px);
+               
+           }
+           &__title{
+               @include titles (23px, 29px);
+           }
+           &__text{
+               @include text1 (14px);
+           }
+        }
+
+        &__item3 {
+            @include sOnemob; 
+            &__step{
+               @include steps (0px, 4px);
+           }
+           &__title{
+               @include titles (21px, 58px);
+           }
+           &__text{
+               @include text1 (14px);
+           }
+        }
+    }
+}
+
+.section2{
+    width: 280px;
+    height: 1012px;
+    margin: 0 auto 35px;
+
+    &__title{
+        font-size: 22px;
+        margin-bottom: 14px;
+        height: 54px;
+        line-height: 27px;
+    }
+    &__box{
+        width: 236px;
+        height: 868px;
+        flex-flow: column nowrap;
+        align-items: center;
+        margin: 14px auto 36px;
+        
+
+        &__pic1{
+            @include picsmob;
+            &__img{
+                @include img2s (url(../Images/Bitmap.png));
+                &::after{
+                    @include after (url(../Images/music2.png), #FF4E50, 6px);
+                }
+                }
+            &__figcaption{
+                @include figcaption2s (22px);
+            }
+            &__description{
+                @include desc2s;
+            }
+        }
+        &__pic2{
+             @include picsmob;
+             &__img{
+                @include img2s (url(../Images/Bitmap2.png));
+                &::after{
+                    @include after (url(../Images/brush.png), #19D4CA, 6px);
+                }
+            }
+             &__figcaption{
+                @include figcaption2s (22px);
+            }
+            &__description{
+                @include desc2s;
+            }
+        }
+        &__pic3{
+             @include picsmob;
+             &__img{
+                @include img2s (url(../Images/Bitmap3.png));
+                &::after{
+                    @include after (url(../Images/camera.png), #FFA710, 6px);
+                }
+            }
+             &__figcaption{
+                @include figcaption2s (26px);
+            }
+            &__description{
+                @include desc2s;
+            }
+        }
+        &__pic4{
+            @include picsmob;
+            margin-top: 16px;
+             &__img{
+                @include img2s (url(../Images/Bitmap4.png));
+                &::after{
+                    @include after (url(../Images/Shape.png), #667DF3, 2px);
+                    padding-left: 2px;
+                }
+            }
+             &__figcaption{
+                @include figcaption2s (26px);
+            }
+            &__description{
+                @include desc2s;
+            }
+        }
+    }
+    &__button{
+        width: 180px;
+        height: 40px;
+        border-radius: 40px;
+        border: 2px solid #FF4E50;
+        color:#FF4E50;
+        font-size: 14px;
+        line-height: 17px;
+        font-family: $font-bold;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-align: center;
+        padding: 10px;
+        margin:0 auto;
+
+    }
+
+}
+
+.section3{
+    width: 300px;
+    height: 987px;
+    margin: 0 auto 35px;
+
+    &__title{
+        font-size: 22px;
+    }
+
+    &__container{
+        width: 300px;
+        height: 900px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        align-items: center;
+
+
+        &__box1{
+            @include boxs3mob (380px);
+            margin-bottom: 10px;
+
+            &__item1{
+                @include itemsmob (300px, 120px, url(../Images/Grid1.png))
+            }
+            &__item2{
+                @include itemsmob (300px, 120px, url(../Images/Grid2.png))
+            }
+            &__item3{
+                @include itemsmob (300px, 120px, url(../Images/Grid3.png))
+            }
+        }
+
+        &__box2 {
+            @include boxs3mob (250px);
+            margin-bottom: 10px;
+           
+            &__item4{
+                @include itemsmob (300px, 120px, url(../Images/Grid4.png))
+            }
+            &__item5{
+                @include itemsmob (300px, 120px, url(../Images/Grid5.png))
+            }
+        }
+
+        &__box3{
+           @include boxs3mob (250px); 
+
+            &__item6{
+                @include itemsmob (300px, 120px, url(../Images/Grid6.png))
+            }
+            &__item7{
+                @include itemsmob (300px, 120px, url(../Images/Grid7.png))
+            }
+        }
+    }
+
+}
+
+.section4{
+    width: 280px;
+    height: 192px;
+    margin: 0 auto 60px;
+
+    &__title{
+       font-size: 22px;
+    }
+
+    &__form{
+       width: 100%;
+       height: 129px; 
+
+       &__text{
+            width: 100%;
+            height: 24px;
+            font-size: 17.5px;
+            line-height: 18px;
+            font-family: $font-text;
+            font-weight: 300;
+            color: rgba(102, 102, 102, 1);
+            text-align: center;
+            margin-top: 49px;
+        }
+
+        &__input{
+            width: 100%;
+            height: 90px;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-between;
+            margin-top: 17px;
+
+            &__field{
+                width: 280px;
+                height: 40px;
+                padding: 10px;
+                margin-bottom: 10px;
+            }
+
+            &__button{
+                width: 280px;
+                height: 40px;
+                background: #FF4E50;
+                border:none;
+                border-radius: 40px;
+                font-size: 14px;
+                line-height: 17px;
+                letter-spacing: 00.5px;
+                color:#FFFFFF;
+                font-family: $font-bold;
+            }
+        }
+    }
+  
+}
+
+.footer{
+    width: 100%;
+    height: 222px;
+    border-top: 3px solid #FF4E50;
+
+    &__content{
+        width: 280px;
+        height: 205px;
+        margin: 0 auto;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-top: 19px;
+        
+
+      &__dreamshare{
+          @include fof (rgba(255, 78, 80, 1), 400);
+          text-transform: uppercase;
+          font-size: 17px;
+          margin: 0 auto 13px;
+      }  
+      &__company{
+          width: 100%;
+          letter-spacing: 1px;
+          @include fof (#444444, 700);
+          text-align: center;
+          margin: 0 auto 10px;
+          &__list{
+            width:100%;
+            height: 52px;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            align-items: center;
+            @include fof (rgba(153, 153, 153, 1), 300);  
+          }
+      }
+      &__partners{
+          width: 100%;
+          @include fof (#444444, 700);
+          letter-spacing: 1px;
+          margin: 0 auto 10px;
+          text-align: center;
+          
+      }
+      &__logo{
+        font-size: 12px;
+        line-height: 26px;
+        font-family:$font-bold;
+        font-weight: 700;
+        text-align: center;
+        color:  #CCCCCC;
+        text-transform: uppercase; 
+        margin: 0 auto;
+      }
+    }
+}
+
+}

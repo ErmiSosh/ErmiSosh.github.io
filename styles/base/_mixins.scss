@@ -1,0 +1,207 @@
+@mixin title{
+    height: 32px;
+    font-family:$font-bold;
+    font-size: 26px; 
+    line-height: 32px; 
+    text-align: center;
+    margin-bottom: 35px;
+    font-weight:700;
+    letter-spacing: 1.5px;
+    margin-top:3px;
+}
+
+@mixin sOne ($image){
+    background-image: $image;
+    width: 300px;
+    height: 400px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-end;
+    padding: 25px 25px 22px;
+    border-radius: 4px;
+}
+
+@mixin sOnetab{
+    width: 236px; 
+    padding: 25px 20px 16px;
+}
+
+@mixin sOnemob {
+    width: 300px;
+    height: 240px;
+    background-position: center;
+}
+
+@mixin steps ($marg, $margb) {
+    font-family: $font-bold;
+    width: 70px;
+    height: 20px;
+    background-color: #FF4E50;
+    border-radius: 40px;
+    color: rgba(255, 255, 255, 0.73);
+    text-align: center;
+    padding: 5px;
+    line-height: 12px;
+    font-size: 10px;
+    margin: $marg 0 $margb; 
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+
+@mixin titles ($pt, $heightt) {
+    width: 250px;
+    height: $heightt;
+    font-size: 24px;
+    font-family:$font-bold;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding-top: $pt;
+}
+
+@mixin text1 ($padt){
+    width: 250px;
+    height: 57px;
+    font-size: 14px;
+    line-height: 16px;
+    font-family: $font-text;
+    font-weight: 300;
+    color:#e3e3e3d3;
+    padding-top: $padt;
+}
+
+@mixin text1tab{
+    width: 196px;
+    height: 76px;
+        
+}
+
+@mixin box{
+    width: 941px;
+    height: 224px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin:36px 0;
+}
+
+@mixin pics{
+    width: 221px;
+    height: 224px;
+    text-align: center;
+    margin-bottom:36px;
+}
+
+@mixin picsmob {
+    width: 236px;
+    height: 205px;
+    margin-bottom:16px;  
+}
+
+@mixin img2s ($backgr){
+    background-image: $backgr;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 50px 17px;
+    position: relative;
+}
+
+@mixin after ($icon, $icolor, $pt){
+    content: $icon;
+    background-color: $icolor;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 36px;
+    height: 36px;
+    border: 4px solid #FFFFFF;
+    border-radius: 50%;
+    padding-top: $pt;
+}
+
+@mixin figcaption2s ($margf){
+    font-size: 14px;
+    line-height: 17px;
+    font-family: $font-bold;
+    font-weight: 700;
+    color: #444444;
+    margin-bottom: $margf;
+}
+
+@mixin desc2s {
+    font-size: 14px;
+    line-height: 14px;
+    font-family: $font-text;
+    font-weight: 300;
+    color: #666666;
+}
+
+@mixin buttonh{
+    width: 90px;
+    height: 36px;
+    font-family: $font-bold;
+    font-size: 14px;
+    text-transform: capitalize;
+    font-weight: 400;
+    line-height: 17px;
+    color: rgba(255, 255, 255, 1);
+    background: none;
+    outline: none;
+    cursor: pointer;
+}
+
+@mixin boxs3 ($hs3){
+    width: 100%;
+    height: $hs3;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+@mixin boxs3mob ($hs3){
+    width: 100%;
+    height: $hs3;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin items ($wb1, $hb1, $bab1){
+    width: $wb1;
+    height: $hb1;
+    background-image: $bab1;
+    background-repeat: no-repeat;
+    border-radius: 2px;
+    text-align: center;
+    font-size: 22px;
+    line-height: 27px;
+    font-family:$font-bold;
+    font-weight: 700;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+    padding: 140px 45px; 
+}
+
+@mixin itemsmob ($wb1, $hb1, $bab1){
+    width: $wb1;
+    height: $hb1;
+    padding: 33px 47px; 
+}
+
+@mixin fof ($fcol, $weight){
+    font-size: 14px;
+    line-height: 26px;
+    font-family:$font-text;
+    font-weight: $weight;
+    color: $fcol;
+
+}   
+
+
+
